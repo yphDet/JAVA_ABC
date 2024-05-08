@@ -1,0 +1,37 @@
+enum常用方法说明
+
+说明：使用关键字 enum 时，会隐式继承 Enum 类, 这样我们就可以使用 Enum 类相关的方法。[看下源码定义.]
+public abstract class Enum<E extends Enum<E>>
+    implements Comparable<E>, Serializable {
+}
+
+常用方法
+1) toString:Enum 类已经重写过了，返回的是当前对象
+名,子类可以重写该方法，用于返回对象的属性信息
+2) name：返回当前对象名（常量名），子类中不能重写
+80% 3) ordinal：返回当前对象的位置号，默认从 0 开始
+
+100% 4) values：返回当前枚举类中所有的常量
+使用方式：
+//从反编译可以看出 values方法，返回 Season1[]
+        //含义定义的所有枚举对象
+        Season1[] season1 = Season1.values();
+
+80% 5) valueOf：将字符串转换成枚举对象，要求字符串必须
+为已有的常量名，否则报异常！
+80% 6) compareTo：比较两个枚举常量，比较的就是编号！
+
+
+150% //对4）方法进行知识添加 增强for
+//从反编译可以看出 values方法，返回 Season1[]
+        //含义定义的所有枚举对象
+        Season1[] season1 = Season1.values();
+        System.out.println("====遍历取出枚举对象（增强for）===");
+        //解读：
+        /*
+        Season1 s表示新建一个变量，season1表示数组名
+        增强for 从数组season1中遍历放入新建变量中
+         */
+        for(Season1 s:season1){
+            System.out.println(s);
+        }

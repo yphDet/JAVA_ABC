@@ -1,0 +1,21 @@
+理解：
+1)String 对象用于保存字符串，也就是一组字符序列
+2)字符串常量对象是用双引号括起的字符序列。例如：“你好"、"12.97"、"boy"等
+
+3)字符串的字符使用Unicode 字符编码，一个字符（不区分字母还是汉字）占两个字节。
+
+4)String类较常用构造器（其他看手册）：
+String s1 = new String();
+String s2 = new String( String original);
+String s3 = new String( char[] a);
+String s4= new String( charl[] a, int startIndex, int count)
+说明：String类有很多构造器，构造器的重载。
+
+5)String类实现了接口 Serializable【String 可以串行化，可以在网络转输】
+              接口 Comparable【String 对象可以比较大小】
+
+6)String类 是final类，不能被其他的类继承
+
+200% 7)String 有属性 private final char value[];用于存放字符串内容
+8)一定要注意：value 是一个final 类型，不可以修改（需要功力）：
+即value 不能指新的地址，但是单个字符内容是可以变化

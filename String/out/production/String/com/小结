@@ -1,0 +1,6 @@
+String类创建对象的两种方式
+最主要是画出这两种方式在内存中的形式
+
+eg：
+String s = "daf";//指向常量池
+String s1 = new String("dai");//指向堆中的对象

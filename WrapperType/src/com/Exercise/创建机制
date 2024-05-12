@@ -1,0 +1,11 @@
+//Integer创建机制
+//阅读源码；
+public static Integer valueOf(int i) {
+        if (i >= IntegerCache.low && i <= IntegerCache.high)
+            return IntegerCache.cache[i + (-IntegerCache.low)];
+        return new Integer(i);
+    }
+//1、如果i在IntegerCache.low（-128）~ IntegerCache.high（127），就直接从数组返回
+//2、如果不在-128~127 ，就直接 new Integer(i);
+
+结论，这里主要看范围 -128~127 就是直接返回

@@ -1,0 +1,24 @@
+【1】、包装类的分类
+1.1：针对八种基本对应的引用类型——包装类
+1.2：有了类的特点，可以调用类的方法
+
+基本数据类型分为三类：字符型(char)、布尔型(boolean)、数值型
+
+基本数据类型              包装类
+boolean                 Boolean
+char                    Character
+
+byte                    Byte
+short                   Short
+int                     Integer
+long                    Long
+float                   Float
+double                  Double
+
+
+【2】、包装类和基本数据的转换
+演示 包装类 和 基本数据类型的相互转换，这里以 int 和 Integer演示。
+2.1：jdk5前的手动装箱和拆箱方式，    装箱： 基本数据->包装类型，(Valueof方法) 反之，拆箱（intValue方法）
+2.2：jdk5以后的自动装箱和拆箱方式
+100% 2.3：自动装箱底层调用的是valueOf方法；  自动拆箱 intValue方法
+2.4：其他包装类的用法类似；

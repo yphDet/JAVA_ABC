@@ -1,0 +1,17 @@
+String --》 StringBuffer
+1）使用构造器
+String s = "hello";
+StringBuffer sb = new StringBuffer(s);
+
+2)使用的是append方法
+StringBuffer sb1 = new StringBuffer();
+sb1 = ab1.append(s);
+
+
+StringBuffer --》String
+1)使用StringBuffer提供的toString方法
+StringBuffer sb = new StringBuffer("hello");
+String s = sb.toString();
+
+2)使用构造器来搞定
+String s1 = new String(sb);

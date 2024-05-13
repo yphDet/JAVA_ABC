@@ -1,0 +1,6 @@
+1）增 append  //类似与String类中的concert方法
+2）删 delete(start,end);//范围：[start,end)
+3）改 replace(start,end,string)//将start到end之间的字符替换
+4）查 indexOf //查找子串在在字符串第1次出现的索引，如果找不到，返回*1
+5）插 insert
+6）获取长度 length

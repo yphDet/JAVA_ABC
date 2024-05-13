@@ -1,0 +1,13 @@
+【String 与 StringBuffer 之间的区别】
+1、底层机制
+1.1：StringBuffer类中属性private transient char[] toStringCache;用于保存数据，每次String Buffer 的更新实际上可以更新内容，不用每次更新地址，
+1.2：String类属性private final char[] value用于保存字符串常量；  【final】 因此每次String 类的更新实际上就是更改地址，效率较低
+
+【String 与 StringBuffer之间的转换】
+1、String -》 StringBuffer
+1.1：StringBuffer构造器
+1.2：StringBuffer类中的append方法
+
+2、StringBuffer -》 String
+2.1：String构造器
+2.2：StringBuffer类对象调用 toString方法

@@ -1,0 +1,7 @@
+1)String 保存的是字符串常量，里面的值不能更改，每次String 类的更新实际上就是更改地址，效率较低//final char valuel:
+2)StringBuffer 保存的是字符串变量，里面的值可以更改，每次String Buffer 的更新实际上可以更新内容，不用每次更新地址，
+效率较高//char[]value ;//这个放在堆
+
+
+//思考String是保存字符串常量的底层原理？
+//StringBuffer的呢？

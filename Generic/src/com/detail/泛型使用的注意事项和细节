@@ -1,0 +1,13 @@
+1、interface List<T>{},  public class HashSet<E>{}……等
+说明：T，E只能是引用类型【泛型的值只能是引用类型】--数据类型【引用数据类型！！！】
+eg:
+List<Integer> list = new ArrayList<Integer> ();//OK
+List<int> list2 = new ArrayLsit<int> ();//错误；
+
+2、在给泛型指定具体类型后，可以传入该类型或者其子类类型---面向对象中三大特性之一的多态
+
+3、泛型使用形式
+3.1：List<Integer> list1 = new ArrayList<Integer> ();
+3.2:List<Integer> list2 = new ArrayList<>();
+
+3.3：如果这样写 List list3 = new ArrayList();默认给它的 泛型是[ <E> E就是Object类型]

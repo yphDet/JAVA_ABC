@@ -1,0 +1,16 @@
+泛型的继承和通配符说明：
+1、泛型不具备继承性[简单来讲就是各自管各自的]，但是出入的数据具备
+List<Object> list = new ArrayList<Strint>();//NO
+解读：在底层源码中ArrayList类实现了List接口 简写：class ArrayList<E> implement List<E>{}
+虽然Object类是String类的基类，但是泛型不具备继承性，因此上面的代码编译器会报错。
+
+
+通配符
+2、<?> :支持任意泛型类型
+3、<? extends A> :支持A类以及A类的子类，规定了泛型的上限
+4、<? super A> :支持A类以及A类的父类，不限于直接父类，规定了泛型的下限
+
+我的疑惑：
+解答：
+List<? extends A> c：1、表示传入参数的类型为List（包含继承以及实现关系）2、通配符   表示可以接受的泛型值的范围
+总结：1、数据类型 2、泛型
